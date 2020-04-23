@@ -19,6 +19,7 @@ class CrearTablaDomicilio extends Migration
             $table->foreign('usuario_id','fk_domicilio_usuario')->references('id')
             ->on('usuario')->onDelete('restrict')->onUpdate('restrict');
             $table->string('Direccion',200);
+            $table->string('colonia');
             $table->string('municipio',50);
             $table->string('departamento',50);
             $table->timestamps();

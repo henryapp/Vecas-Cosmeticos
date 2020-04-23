@@ -15,9 +15,10 @@ class CrearTablaUsuario extends Migration
     {
         Schema::create('usuario', function (Blueprint $table) {
             $table->id();
-            $table->string('usuario',50);
+            $table->string('usuario',50)->unique();
             $table->string('password',100);
-            $table->string('email',100);
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('telefono_movil',9);
             $table->string('telefono_casa',9)->nullable();
             $table->timestamps();
