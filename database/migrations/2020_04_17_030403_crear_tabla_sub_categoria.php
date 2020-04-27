@@ -20,6 +20,8 @@ class CrearTablaSubCategoria extends Migration
             $table->foreign('categoria_id','fk_subCategoria_categoria')
             ->references('id')->on('categoria')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Veca's - Tu Tienda Online</title>
+        <title>@yield('titulo','Veca´s') | Tu Tienda Online</title>
 
         <meta name="keywords" content="HTML5 Template" />
         <meta name="description" content="Veca's - Tu Tienda Online">
@@ -28,7 +28,7 @@
 
         <!-- Plugins CSS File -->
         <link rel="stylesheet" href="{{asset("assets/$theme/css/bootstrap.min.css")}}">
-
+        @yield('styles')
         <!-- Main CSS File -->
         <link rel="stylesheet" href="{{asset("assets/$theme/css/style.min.css")}}">
         <link rel="stylesheet" type="text/css" href="{{asset("assets/$theme/vendor/fontawesome-free/css/all.min.css")}}">
@@ -42,9 +42,11 @@
                 <div class="home-slider-container">
                     <div class="home-slider owl-carousel owl-theme">
                         <div class="home-slide">
-                            <div class="slide-bg owl-lazy"  data-src="{{asset("assets/$theme/images/slider/slide-10.jpg")}}"></div><!-- End .slide-bg -->
+                            <div class="slide-bg owl-lazy"  data-src="{{asset("assets/$theme/images/slider/portada2.jpg")}}"></div><!-- End .slide-bg -->
                             <div class="home-slide-content container">
+                                <!--
                                 <div class="slide-text">Up to <br>
+                                    
                                     <div>
                                         <span class="slide-sale">50</span>
                                         <span>
@@ -52,10 +54,11 @@
                                             OFF
                                         </span>
                                     </div>
-                                </div>
+                                </div>-->
+                                <!--
                                 <h1>Veca's Online</h1>
                                 <h3>consigelo ya a <strong>$99.00</strong></h3>
-                                <a href="category.html" class="btn btn-primary">Shop Now</a>
+                                <a href="category.html" class="btn btn-primary">Shop Now</a>-->
                             </div><!-- End .home-slide-content -->
                         </div><!-- End .home-slide -->
     
@@ -693,7 +696,7 @@
 
     <div class="newsletter-popup mfp-hide" id="newsletter-popup-form" style="background-image: url({{asset("assets/$theme/images/newsletter_popup_bg.jpg")}})">
         <div class="newsletter-popup-content">
-            <img src="{{asset("assets/$theme/images/logo-black.png")}}" alt="Logo" class="logo-newsletter">
+            <img src="{{asset("assets/$theme/images/vecas-black.png")}}" alt="Logo" class="logo-newsletter">
             <h2>BE THE FIRST TO KNOW</h2>
             <p>Subscribe to the Porto eCommerce newsletter to receive timely updates from your favorite products.</p>
             <form action="#">
@@ -734,12 +737,13 @@
 <!------------------------------------------------------->
 
 
-        !-- Plugins JS File -->
+        <!-- Plugins JS File -->
     <script src="{{asset("assets/$theme/js/jquery.min.js")}}"></script>
     <script src="{{asset("assets/$theme/js/bootstrap.bundle.min.js")}}"></script>
     <script src="{{asset("assets/$theme/js/plugins.min.js")}}"></script>
 
     <!-- Main JS File -->
     <script src="{{asset("assets/$theme/js/main.min.js")}}"></script>
+    @yield('scripts')
     </body>
 </html>

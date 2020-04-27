@@ -24,6 +24,8 @@ class CrearTablaDetalleEntrada extends Migration
             $table->decimal('costo_unitario',8,2);
             $table->unsignedTinyInteger('cantida');
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

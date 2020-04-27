@@ -33,6 +33,8 @@ class CrearTablaProducto extends Migration
             $table->decimal('precio_costo',8,2);
             $table->decimal('precio_venta',8,2);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

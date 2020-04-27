@@ -107,7 +107,7 @@
                             </div><!-- End .megamenu -->
                         </li>
                         <li>
-                            <a href="#" class="sf-with-ul">Pages</a>
+                            <a href="#" class="sf-with-ul" >Pages</a>
 
                             <ul>
                                 <li><a href="cart.html">Shopping Cart</a></li>
@@ -136,7 +136,7 @@
                                 <li><a href="forgot-password.html">Forgot Password</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="sf-with-ul">Features</a>
+                        <li><a href="#" class="sf-with-ul" >Features</a>
                             <ul>
                                 <li><a href="#">Header Types</a></li>
                                 <li><a href="#">Footer Types</a></li>
@@ -144,13 +144,14 @@
                         </li>
                     </ul>
                 </nav>
+                
             </div><!-- End .header-left -->
-
+<!----- logo parte de la barra
             <div class="header-center">
                 <a href="index.html" class="logo">
-                    <img src="{{asset("assets/$theme/images/logo.png")}}" alt="Porto Logo">
+                    <img src="{{asset("assets/$theme/images/logo-vecas.png")}}" alt="Veca's">
                 </a>
-            </div><!-- End .header-center -->
+            </div>--><!-- End .header-center -->
 
             <div class="header-right">
                 <div class="header-search">

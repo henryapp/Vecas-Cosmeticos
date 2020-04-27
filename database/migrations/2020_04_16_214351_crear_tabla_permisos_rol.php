@@ -14,7 +14,6 @@ class CrearTablaPermisosRol extends Migration
     public function up()
     {
         Schema::create('permisos_rol', function (Blueprint $table) {
-            $table->id();
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id','fk_permisorol_rol')->references('id')->on('rol')
             ->onDelete('restrict')->onUpdate('restrict');
@@ -22,6 +21,8 @@ class CrearTablaPermisosRol extends Migration
             $table->foreign('permisos_id','fk_permisosrol_permisos')->references('id')->on('permisos')
             ->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

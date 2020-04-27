@@ -21,6 +21,8 @@ class CrearTablaEntrada extends Migration
             $table->dateTime('fecha_entrada',0);
             $table->decimal('total_compra',8,2);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

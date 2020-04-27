@@ -30,6 +30,8 @@ class CrearTablaCompra extends Migration
             $table->dateTime('fecha_compra',0);
             $table->decimal('total_pagar',8,2);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 
