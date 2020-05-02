@@ -16,7 +16,8 @@
       <input type="text" name="icono" id="icono" class="form-control" value="{{old('icono')}}" />
     </div>
       <div class="col-lg-1">
-        <span id="mostrar-icono" class="fas {{old("icono")}} "></span>
+        <span id="mostrar-icono" class="fas {{old("icono")}}"></span>
+        
       </div>      
 </div>
 <div class="form-group row">

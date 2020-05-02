@@ -15,7 +15,7 @@
                   <h3 class="card-title">Crear Menús</h3>
                 </div>
                 <!-- /.card-header -->
-                <form action="{{route("guardar_menu")}}" id="form-general" class="form-horizontal" method="POST">
+                <form action="{{route("guardar_menu")}}" id="form-general" class="form-horizontal" method="POST" autocomplete="off">
                     @csrf
                     <div class="card-body ">
                     @include('admin.menu.form')

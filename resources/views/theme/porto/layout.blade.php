@@ -41,7 +41,8 @@
             <main class="main">
                 <div class="home-slider-container">
                     <div class="home-slider owl-carousel owl-theme">
-                        <div class="home-slide">
+                        <div class="col-md-12 col-sm-12 home-slide">
+                            <!--pegar imagem--->
                             <div class="slide-bg owl-lazy"  data-src="{{asset("assets/$theme/images/slider/portada2.jpg")}}"></div><!-- End .slide-bg -->
                             <div class="home-slide-content container">
                                 <!--
