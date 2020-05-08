@@ -19,9 +19,14 @@
 <div class="row">
     <div class="col-lg-12">
         @include('includes.mensaje')
-        <div class="card card-seccess">
-            <div class="card-header with-boder">
+        <div class="card card-info">
+            <div class="card-header">
                 <h3 class="card-title">Menús</h3>
+                <div class="card-tools">
+                    <a href="{{route('crear_menu')}}" class="btn btn-block bg-gradient-success btn-sm">
+                        <i class="fas fa-plus"></i> Crear Menu
+                    </a>
+                </div>
             </div>
                 <!-- /.card-header -->
             <div class="card-body ">

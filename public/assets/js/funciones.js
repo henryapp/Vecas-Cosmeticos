@@ -37,7 +37,7 @@ var Vecas = function () {
                 }
             });
         },
-        /*notificaciones: function (mensaje, titulo, tipo) {
+        notificaciones: function (mensaje, titulo, tipo) {
             toastr.options = {
                 closeButton: true,
                 newestOnTop: true,
@@ -54,6 +54,6 @@ var Vecas = function () {
             } else if (tipo == 'warning') {
                 toastr.warning(mensaje, titulo);
             }
-        },*/
+        },
     }
 }();

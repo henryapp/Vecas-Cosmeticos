@@ -10,6 +10,11 @@ class Menu extends Model
     protected $fillable=['nombre','url','icono','tipo_menu'];
     protected $guarded=['id'];
 
+    public function roles()
+    {
+        return $this->belongsToMany(Rol::class, 'menu_rol');
+    }
+
     public function getHijos($padres, $line)
     {
         $children = [];
@@ -44,11 +49,14 @@ class Menu extends Model
         $padres=$menus->getPadres($front);
         $menuAll=[];
         foreach($padres as $line){
-            if($line['menu_id']!= 0)
-                break;
-            $item=[array_merge($line,['submenu' => $menus->getHijos($padres,$line)])];
-            $menuAll=array_merge($menuAll, $item);
-        }
+            /*-------verificar que tipo de menu es ----*/
+            /*---if($line['tipo_menu']== "horizontal"){---*/
+                    if($line['menu_id']!= 0)
+                        break;
+                    $item=[array_merge($line,['submenu' => $menus->getHijos($padres,$line)])];
+                    $menuAll=array_merge($menuAll, $item);
+               /*---- }--**/
+            }
         return $menuAll;
     }
     public function guardarOrden($menu)
