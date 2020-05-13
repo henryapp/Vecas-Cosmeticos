@@ -22,6 +22,8 @@ class CrearTablaDomicilio extends Migration
             $table->string('colonia');
             $table->string('municipio',50);
             $table->string('departamento',50);
+            $table->string('telefono_movil',9);
+            $table->string('telefono_casa',9)->nullable();
             $table->timestamps();
             $table->charset='utf8mb4';
             $table->collation='utf8mb4_spanish_ci';

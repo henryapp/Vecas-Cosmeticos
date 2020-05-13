@@ -4,9 +4,9 @@
             <div class="header-left">
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
-                        <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="{{route('home-inicio')}}">Home</a></li>
                         <li>
-                            <a href="category.html" class="sf-with-ul">Categories</a>
+                            <a href="category.html" class="sf-with-ul">Categorias</a>
                             <div class="megamenu megamenu-fixed-width">
                                 <div class="row">
                                     <div class="col-lg-8">
@@ -54,7 +54,7 @@
                             </div><!-- End .megamenu -->
                         </li>
                         <li class="megamenu-container">
-                            <a href="product.html" class="sf-with-ul">Products</a>
+                            <a href="product.html" class="sf-with-ul">Productos</a>
                             <div class="megamenu">
                                 <div class="row">
                                     <div class="col-lg-8">
@@ -226,7 +226,7 @@
                 </div><!-- End .header-dropdowns -->
 
                 <div class="header-contact">
-                    <a href="tel:#">+000 1584 2578</a>
+                <a href="{{route('login-inicio')}}">LOGIN</a>
                 </div><!-- End .header-contact -->
 
                 <div class="dropdown cart-dropdown">

@@ -17,10 +17,9 @@ class CrearTablaUsuario extends Migration
             $table->id();
             $table->string('usuario',50)->unique();
             $table->string('password',100);
+            $table->string('nombre',150);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('telefono_movil',9);
-            $table->string('telefono_casa',9)->nullable();
             $table->timestamps();
             $table->charset='utf8mb4';
             $table->collation='utf8mb4_spanish_ci';

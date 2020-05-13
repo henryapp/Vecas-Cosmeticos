@@ -1,1 +1,1 @@
-@include("theme.$themes.layout")
+@include("theme.$theme.layout")

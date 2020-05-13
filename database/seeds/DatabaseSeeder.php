@@ -14,9 +14,12 @@ class DatabaseSeeder extends Seeder
     {
         $this->truncateTablas([
             'rol',
+            'usuario',
+            'usuario_rol'
         ]);
         // $this->call(UsersTableSeeder::class);
         $this->call(TablaRolSeeder::class);
+        $this->call(UsuarioAdministradorSeeder::class);
     }
     // trucar tabla nunca se debe hacer cuando este en produccion 
     protected function truncateTablas(array $tablas)

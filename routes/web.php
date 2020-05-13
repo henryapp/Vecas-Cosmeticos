@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/','InicioController@index');
 //Route::get('admin/permiso','Admin\PermisoController@index')->name('permiso');
-Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+/*
+Route::get('/','InicioController@index')->name('inicio');*/
+
+Route::get('home','HomeController@index')->name('home-inicio');
+
+//---------LOGIN---------
+Route::get('seguridad/login','Seguridad\LoginController@index')->name('login-inicio');
+Route::post('seguridad/login','Seguridad\LoginController@login')->name('login-post');
+Route::get('seguridad/logout','Seguridad\LoginController@logout')->name('logout');
+
+Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','superadmin']],function(){
+    Route::get('','AdminController@index');
     Route::get('permiso','PermisoController@index')->name('permiso');
     Route::get('permiso/crear','PermisoController@crear')->name('crear_permiso');
     //-------RUTAS MENU-------
@@ -34,6 +44,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
     Route::get('menu-rol','MenuRolController@index')->name('menu_rol');
     Route::post('menu-rol','MenuRolController@guardar')->name('guardar_menu_rol');
 });
+/*
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home');*/
