@@ -4,43 +4,28 @@
             <div class="header-left">
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
-                    <li class="active"><a href="{{route('home-inicio')}}">Home</a></li>
+                    <li class="menu-home"><a href="{{route('home-inicio')}}">Home</a></li>
                         <li>
-                            <a href="category.html" class="sf-with-ul">Categorias</a>
+                            <a href="category.html" class="sf-with-ul">MAKEUP</a>
                             <div class="megamenu megamenu-fixed-width">
                                 <div class="row">
                                     <div class="col-lg-8">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <div class="menu-title">
-                                                <a href="#">Variations 1<span class="tip tip-new">New!</span></a>
+                                                <a href="#">Acaba de llegar<span class="tip tip-new">New!</span></a>
                                             </div>
                                             <ul>
-                                                <li><a href="category-banner-full-width.html">Fullwidth Banner<span class="tip tip-hot">Hot!</span></a></li>
-                                                <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
-                                                <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
-                                                <li><a href="category-sidebar-left.html">Left Sidebar</a></li>
-                                                <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
-                                                <li><a href="category-flex-grid.html">Product Flex Grid</a></li>
-                                                <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
-                                                <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
+                                                <li><a href="category-banner-full-width.html">Lo mas vendido <span class="tip tip-hot">Hot!</span></a></li>
+                                                <li><a href="category-banner-boxed-slider.html">Cara</a></li>
+                                                <li><a href="category-banner-boxed-image.html">Ojos</a></li>
+                                                <li><a href="category-sidebar-left.html">Labios</a></li>
+                                                <li><a href="category-sidebar-right.html">Mejillas</a></li>
+                                                <li><a href="category-flex-grid.html">Brochas</a></li>
+                                                
                                             </ul>
                                         </div><!-- End .col-lg-6 -->
-                                        <div class="col-lg-6">
-                                            <div class="menu-title">
-                                                <a href="#">Variations 2</a>
-                                            </div>
-                                            <ul>
-                                                <li><a href="#">Product List Item Types</a></li>
-                                                <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
-                                                <li><a href="category-3col.html">3 Columns Products</a></li>
-                                                <li><a href="category-4col.html">4 Columns Products <span class="tip tip-new">New</span></a></li>
-                                                <li><a href="category.html">5 Columns Products</a></li>
-                                                <li><a href="category-6col.html">6 Columns Products</a></li>
-                                                <li><a href="category-7col.html">7 Columns Products</a></li>
-                                                <li><a href="category-8col.html">8 Columns Products</a></li>
-                                            </ul>
-                                        </div><!-- End .col-lg-6 -->
+                                        
                                     </div><!-- End .row -->
                                 </div><!-- End .col-lg-8 -->
                                     <div class="col-lg-4">
@@ -54,46 +39,37 @@
                             </div><!-- End .megamenu -->
                         </li>
                         <li class="megamenu-container">
-                            <a href="product.html" class="sf-with-ul">Productos</a>
+                            <a href="product.html" class="sf-with-ul">SKINCARE</a>
                             <div class="megamenu">
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="menu-title">
-                                                    <a href="#">Variations</a>
+                                                    <a href="#">Acaba de llegar<span class="tip tip-new">New!</span></a>
                                                 </div>
                                                 <ul>
-                                                    <li><a href="product.html">Horizontal Thumbnails</a></li>
-                                                    <li><a href="product-full-width.html">Vertical Thumbnails<span class="tip tip-hot">Hot!</span></a></li>
-                                                    <li><a href="product.html">Inner Zoom</a></li>
-                                                    <li><a href="product-addcart-sticky.html">Addtocart Sticky</a></li>
-                                                    <li><a href="product-sidebar-left.html">Accordion Tabs</a></li>
+                                                    <li><a href="category-banner-full-width.html">Lo mas vendido <span class="tip tip-hot">Hot!</span></a></li>
+                                                    <li><a href="product-full-width.html">Hidratantes</a></li>
+                                                    <li><a href="product.html">Limpiadores</a></li>
+                                                    <li><a href="product-addcart-sticky.html">Protector solar</a></li>
+                                                    <li><a href="product-sidebar-left.html">Cuidado de ojos</a></li>
+                                                    <li><a href="product-sidebar-left.html">Tratamientos para manchas y acne</a></li>
+                                                    <li><a href="product-sidebar-left.html">Exfoliantes</a></li>
                                                 </ul>
                                             </div><!-- End .col-lg-4 -->
                                             <div class="col-lg-4">
                                                 <div class="menu-title">
-                                                    <a href="#">Variations</a>
                                                 </div>
                                                 <ul>
-                                                    <li><a href="product-sticky-tab.html">Sticky Tabs</a></li>
-                                                    <li><a href="product-simple.html">Simple Product</a></li>
-                                                    <li><a href="product-sidebar-left.html">With Left Sidebar</a></li>
+                                                    <li><a href="product-sticky-tab.html">Serum</a></li>
+                                                    <li><a href="product-simple.html">Escencias</a></li>
+                                                    <li><a href="product-sidebar-left.html">Mascarillas</a></li>
+                                                    <li><a href="product-sidebar-left.html">Eye patch</a></li>
+                                                    <li><a href="product-sidebar-left.html">Toners</a></li>
                                                 </ul>
                                             </div><!-- End .col-lg-4 -->
-                                            <div class="col-lg-4">
-                                                <div class="menu-title">
-                                                    <a href="#">Product Layout Types</a>
-                                                </div>
-                                                <ul>
-                                                    <li><a href="product.html">Default Layout</a></li>
-                                                    <li><a href="product-extended-layout.html">Extended Layout</a></li>
-                                                    <li><a href="product-full-width.html">Full Width Layout</a></li>
-                                                    <li><a href="product-grid-layout.html">Grid Images Layout</a></li>
-                                                    <li><a href="product-sticky-both.html">Sticky Both Side Info<span class="tip tip-hot">Hot!</span></a></li>
-                                                    <li><a href="product-sticky-info.html">Sticky Right Side Info</a></li>
-                                                </ul>
-                                            </div><!-- End .col-lg-4 -->
+                                            
                                         </div><!-- End .row -->
                                     </div><!-- End .col-lg-8 -->
                                     <div class="col-lg-4">
@@ -107,7 +83,7 @@
                             </div><!-- End .megamenu -->
                         </li>
                         <li>
-                            <a href="#" class="sf-with-ul" >Pages</a>
+                            <a href="#" class="sf-with-ul" >SALE</a>
 
                             <ul>
                                 <li><a href="cart.html">Shopping Cart</a></li>
@@ -136,7 +112,7 @@
                                 <li><a href="forgot-password.html">Forgot Password</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="sf-with-ul" >Features</a>
+                        <li><a href="#" class="sf-with-ul" >VALUE SET</a>
                             <ul>
                                 <li><a href="#">Header Types</a></li>
                                 <li><a href="#">Footer Types</a></li>
@@ -188,47 +164,28 @@
                 <button class="mobile-menu-toggler" type="button">
                     <i class="icon-menu"></i>
                 </button>
+
+                @guest
+                    <div class="header-logins">
+                        <div class="header-login d-none d-sm-none d-md-block">
+                            <a href="{{route('login-inicio')}}">Iniciar Sesion</a>  
+                        </div>
+                        <div class="header-login d-none d-sm-none d-md-block">
+                            <a href="{{route('register-inicio')}}">Registrarse</a>  
+                        </div>
+                    </div>
+                @else
+                <div class="header-logins">
+                    <div class="header-login d-none d-sm-none d-md-block">
+                        <a href="#">Mi Cuenta</a>  
+                    </div>
+                    <div class="header-login d-none d-sm-none d-md-block">
+                    <a href="{{url('seguridad/logout')}}">Cerrar  Sesion</a> 
+                    @csrf 
+                    </div>
+                </div>
+                @endguest
                 
-                <div class="header-dropdowns">
-                    <div class="header-dropdown">
-                        <a href="#">USD</a>
-                        <div class="header-menu">
-                            <ul>
-                                <li><a href="#">EUR</a></li>
-                                <li><a href="#">USD</a></li>
-                            </ul>
-                        </div><!-- End .header-menu -->
-                    </div><!-- End .header-dropown -->
-
-                    <div class="header-dropdown">
-                        <a href="#">ENG</a>
-                        <div class="header-menu">
-                            <ul>
-                                <li><a href="#">ENG</a></li>
-                                <li><a href="#">FRE</a></li>
-                            </ul>
-                        </div><!-- End .header-menu -->
-                    </div><!-- End .header-dropown -->
-
-                    <div class="header-dropdown">
-                        <a href="#">Links</a>
-                        <div class="header-menu">
-                            <ul>
-                                <li><a href="my-account.html">MY ACCOUNT </a></li>
-                                <li><a href="#">DAILY DEAL</a></li>
-                                <li><a href="#">MY WISHLIST </a></li>
-                                <li><a href="blog.html">BLOG</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="#" class="login-link">LOG IN</a></li>
-                            </ul>
-                        </div><!-- End .header-menu -->
-                    </div><!-- End .header-dropown -->
-                </div><!-- End .header-dropdowns -->
-
-                <div class="header-contact">
-                <a href="{{route('login-inicio')}}">LOGIN</a>
-                </div><!-- End .header-contact -->
-
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <span class="cart-count">2</span>

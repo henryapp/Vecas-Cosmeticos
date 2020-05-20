@@ -2,12 +2,15 @@
 
 namespace App\Models\Seguridad;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Admin\Rol;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Authenticatable
+class Usuario extends Authenticatable implements MustVerifyEmail
 {
+    use Notifiable;
     protected $remenber_token=false;
     protected $table='usuario';
     protected $fillable = [

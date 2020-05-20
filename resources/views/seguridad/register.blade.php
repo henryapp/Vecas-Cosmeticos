@@ -4,35 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Veca's | Pagina de resgistro</title>
-    <!-- Tell the browser to be responsive to screen width -->
+  <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-     <!-- Font Awesome -->
-     <script src="https://kit.fontawesome.com/fe3e4a1f59.js" crossorigin="anonymous"></script>
-    
-     <!-- Ionicons -->
-     
-     <!-- Theme style -->
-   
-     <!-- Google Font: Source Sans Pro -->
-     
-     <!---toastr--->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-     <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
-
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset("assets/$themes/plugins/fontawesome-free/css/all.min.css")}}">
-    <!-- Ionicons -->
+  <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fe3e4a1f59.js" crossorigin="anonymous"></script>
+  <!-- Google Font: Source Sans Pro -->
+  <!---toastr--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">
+  <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{asset("assets/$themes/plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
-    <!-- Theme style -->
+  <!-- Theme style -->
     <link rel="stylesheet" href="{{asset("assets/$themes/dist/css/adminlte.min.css")}}">
-    <!-- Google Font: Source Sans Pro -->
+  <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="{{asset("assets/$themes/registrer/img/icons/favicon.ico")}}"/>
@@ -116,7 +100,7 @@
   
             <div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
               <span class="label-input100">Repita la Contraseña</span>
-              <input class="input100" id="password-confirm" type="password" name="repeat-pass" name="password_confirmation" required autocomplete="new-password" placeholder="*************">
+              <input class="input100" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="*************">
               <span class="focus-input100"></span>
             </div>
   
@@ -141,29 +125,15 @@
         </div>
       </div>
     </div>
-    
-    <!-- jQuery -->
-    <script src="{{asset("assets/$themes/registrer/jquery/jquery.min.js")}}"></script>
-    <!-- Bootstrap 4 -->
-    <script src="{{asset("assets/$themes/registrer/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset("assets/$themes/registrer/js/adminlte.min.js")}}"></script>
-
     <script src="{{asset("assets/$themes/plugins/jquery/jquery.min.js")}}"></script>
-    <!--- Bootstrap 4 --->
-    <script src="{{asset("assets/$themes/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
     <!--- AdminLTE App --->
     <script src="{{asset("assets/$themes/dist/js/adminlte.min.js")}}"></script>
     <!---agregar jquery validacion --->
-    
     <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-validation/localization/messages_es.min.js")}}"></script>
-    
-    <!---- sweet alert--->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="{{asset("assets/js/scripts.js")}}"></script>
-    <script src="{{asset("assets/js/funciones.js")}}"></script>
+
 
 
   </body>

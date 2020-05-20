@@ -5,7 +5,8 @@ $(document).ready(function () {
             _token: $('input[name=_token]').val()
         };
         $.ajax({
-            url: '/admin/menu/guardar-orden',
+            //"{{ url('/familiars/storeajax') }}";
+            url: '/vecas/public/admin/menu/guardar-orden',
             type: 'POST',
             dataType: 'JSON',
             data: data,
@@ -13,6 +14,29 @@ $(document).ready(function () {
             }
         });
     });
+    $('.eliminar-menu').on('click', function(event){
+        event.preventDefault();
+        const url=$(this).attr('href');
+        Swal.fire({
+            title: 'Esta usted seguro de eliminar?',
+            text: "No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, elimínalo!'
+        }).then((result) => {
+            if (result.value) {
+              Swal.fire(
+                'Deleted!',
+                'Su menu ha sido eliminado.',
+                'success',
+                
+              )
+              window.location.href= url;
+            }
+          })
+    })
     $('#nestable').nestable('expandAll');
 });
 /*

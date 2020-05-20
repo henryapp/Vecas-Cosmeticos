@@ -9,10 +9,16 @@ label.requerido:after{
     padding: 0 0 0 5px;
     font-size: 14px !important;
     line-height: 1.5;
+    
 }
 .d-inline{
     display: inline;
 }
+.ajustar{
+    white-space: nowrap;
+    width: 1px;
+   }
+   
 
 .width70{
     width: 80px !important;
@@ -27,3 +33,46 @@ label.requerido:after{
 .pl-80{
     padding-left:80px !important;
 }
+.menu li.menu-home > a {
+    background-color: transparent;
+  color: #000000; 
+  font-size: 14px; 
+}
+.header-logins {
+    display: flex;
+    align-items: center;
+    margin-right: 3.5rem;
+    z-index: 999; 
+}
+.header-logins .header-login + .header-login, .header-logins .header-login + .dropdown 
+{
+   margin-left: 2rem; 
+}
+.header-login {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .01rem; }
+.header-login > a {
+    color: #ffff;
+    position: relative;
+    padding-right: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: .025rem;
+    
+}
+.header-login a img {
+    display: inline-block;
+    max-width: 16px;
+    height: auto;
+    margin-right: .6rem; }
+  .header-login a:hover, .header-login a:focus {
+    text-decoration: none; 
+}
+.pull-right {
+    float: right !important;
+}
+          

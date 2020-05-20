@@ -9,7 +9,7 @@
     <div class="home-slider owl-carousel owl-theme">
         <div class="col-md-12 col-sm-12 home-slide">
             <!--pegar imagem--->
-            <div class="slide-bg owl-lazy"  data-src="{{asset("assets/$theme/images/slider/slide-1.jpg")}}"></div><!-- End .slide-bg -->
+            <div class="slide-bg owl-lazy"  data-src="{{asset("assets/$theme/images/slider/portada.png")}}"></div><!-- End .slide-bg -->
             <div class="home-slide-content container">
                 <!--
                 <div class="slide-text">Up to <br>
@@ -81,8 +81,8 @@
 
 <div class="half-section">
     <div class="row no-gutters">
-        <div class="col-md-6 order-md-last half-img" style="background-image: url('{{asset("assets/$theme/images/bg-1.jpg")}}');">
-            <h2 class="half-title">Men's<br>Collection</h2>
+        <div class="col-md-6 order-md-last half-img" style="background-image: url('{{asset("assets/$theme/images/prueba1.jpeg")}}');">
+            <h2 class="half-title"> Lo Nuevo<br>en la Tienda</h2>
         </div><!-- End .col-md-6 -->
 
         <div class="col-md-6">
