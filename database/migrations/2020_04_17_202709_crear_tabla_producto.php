@@ -18,9 +18,6 @@ class CrearTablaProducto extends Migration
             $table->unsignedBigInteger('marca_id');
             $table->foreign('marca_id','fk_producto_marca')->references('id')
             ->on('marca')->onDelete('restrict')->onUpdate('restrict');
-            $table->unsignedBigInteger('sub_categoria_id');
-            $table->foreign('sub_categoria_id','fk_producto_subCategoria')->references('id')
-            ->on('sub_categoria')->onDelete('restrict')->onUpdate('restrict');
             $table->unsignedBigInteger('imagen_id');
             $table->foreign('imagen_id','fk_producto_imagenProducto')->references('id')
             ->on('imagen_producto')->onDelete('restrict')->onUpdate('restrict');

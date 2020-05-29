@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ValidacionMarca;
 use App\Models\Marca;
-use App\Models\Producto;
 use Illuminate\Http\Request;
 
-
-class ProductoController extends Controller
+class MarcaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        
-        can('listar-producto');
-        $datas=Producto::orderBy('id')->get();
-        
-        return view('producto.index',compact('datas'));
+        $datas=Marca::orderBy('id')->get();
+        return view('marca.index',compact('datas'));
     }
 
     /**
@@ -30,9 +26,7 @@ class ProductoController extends Controller
      */
     public function crear()
     {
-        can('crear-producto');
-        $marcas=Marca::orderBy('id')->get();
-        return view('producto.crear',compact('marcas'));
+        return view('marca.crear');
     }
 
     /**
@@ -41,22 +35,11 @@ class ProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(Request $request)
+    public function guardar(ValidacionMarca $request)
     {
-        //
+        Marca::create($request->all());
+        return redirect('marca/crear')->with('mensaje','Permiso creado con exito');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function ver($id)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -65,7 +48,8 @@ class ProductoController extends Controller
      */
     public function editar($id)
     {
-        //
+        $data=Marca::findOrFail($id);
+        return view('marca.editar',compact('data'));
     }
 
     /**
@@ -75,9 +59,10 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function actualizar(Request $request, $id)
+    public function actualizar(ValidacionMarca $request, $id)
     {
-        //
+        Marca::findOrFail($id)->update($request->all());
+        return redirect('marca')->with('mensaje','Permiso actualizado con exito');
     }
 
     /**
@@ -86,8 +71,17 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function eliminar($id)
+    public function eliminar(Request $request, $id)
     {
-        //
+        if ($request->ajax()) {
+            if (Marca::destroy($id)) {
+                return response()->json(['mensaje' => 'ok']);
+            } else {
+                return response()->json(['mensaje' => 'ng']);
+            }
+        } else {
+            abort(404);
+        }
+       
     }
 }

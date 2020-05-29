@@ -4,7 +4,7 @@
 @endsection
 
 @section('contenido')
-@include('includes.mensaje')
+
 <div class="home-slider-container">
     <div class="home-slider owl-carousel owl-theme">
         <div class="col-md-12 col-sm-12 home-slide">
@@ -550,3 +550,4 @@
     </div><!-- End .featured-products -->
 </div>
 @endsection
+@include('includes.mensaje')

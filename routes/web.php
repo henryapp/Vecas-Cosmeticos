@@ -55,10 +55,31 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','supe
     //--------- RUTAS MENU ROL--------
     Route::get('menu-rol','MenuRolController@index')->name('menu_rol');
     Route::post('menu-rol','MenuRolController@guardar')->name('guardar_menu_rol');
-    //--------- RUTAS PERMISO ROL--------
+    //--------- RUTAS PERMISO ROL-----
     Route::get('permiso-rol','PermisoRolController@index')->name('Permiso_rol');
     Route::post('permiso-rol','PermisoRolController@guardar')->name('guardar_permiso_rol');
 });
+//------------PRODUCTO----------------
+Route::get('producto','ProductoController@index')->name('producto');
+Route::get('producto/crear','ProductoController@crear')->name('crear_producto');
+Route::post('producto','ProductoController@guardar')->name('guardar_producto');
+Route::get('producto/{id}/editar','ProductoController@editar')->name('editar_producto');
+Route::put('producto/{id}','ProductoController@actualizar')->name('actualizar_producto');
+Route::delete('producto/{id}','ProductoController@eliminar')->name('eliminar_producto');
+//------------MARCA--------------------
+Route::get('marca','MarcaController@index')->name('marca');
+Route::get('marca/crear','MarcaController@crear')->name('crear_marca');
+Route::post('marca','MarcaController@guardar')->name('guardar_marca');
+Route::get('marca/{id}/editar','MarcaController@editar')->name('editar_marca');
+Route::put('marca/{id}','MarcaController@actualizar')->name('actualizar_marca');
+Route::delete('marca/{id}','MarcaController@eliminar')->name('eliminar_marca');
+//------------CATEGORIA--------------------
+Route::get('categoria','CategoriaController@index')->name('categoria');
+Route::get('categoria/crear','CategoriaController@crear')->name('crear_categoria');
+Route::post('categoria','CategoriaController@guardar')->name('guardar_categoria');
+Route::get('categoria/{id}/editar','CategoriaController@editar')->name('editar_categoria');
+Route::put('categoria/{id}','CategoriaController@actualizar')->name('actualizar_categoria');
+Route::delete('categoria/{id}','CategoriaController@eliminar')->name('eliminar_categoria');
 /*Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');*/

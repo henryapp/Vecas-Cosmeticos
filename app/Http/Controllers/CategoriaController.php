@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Marca;
-use App\Models\Producto;
+
 use Illuminate\Http\Request;
 
-
-class ProductoController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +15,6 @@ class ProductoController extends Controller
     public function index()
     {
         
-        can('listar-producto');
-        $datas=Producto::orderBy('id')->get();
-        
-        return view('producto.index',compact('datas'));
     }
 
     /**
@@ -30,9 +24,7 @@ class ProductoController extends Controller
      */
     public function crear()
     {
-        can('crear-producto');
-        $marcas=Marca::orderBy('id')->get();
-        return view('producto.crear',compact('marcas'));
+        //
     }
 
     /**
@@ -46,17 +38,7 @@ class ProductoController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function ver($id)
-    {
-        //
-    }
-
+  
     /**
      * Show the form for editing the specified resource.
      *

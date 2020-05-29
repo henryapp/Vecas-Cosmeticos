@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Permiso;
 use App\Models\Admin\Rol;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class PermisoRolController extends Controller
 {
@@ -30,6 +31,7 @@ class PermisoRolController extends Controller
     public function guardar(Request $request)
     {
         if($request->ajax()){
+            Cache::tags('permiso')->flush();
             $permisos= new Permiso();
             if($request->input('estado')==1){
                 $permisos->find($request->input('permiso_id'))->roles()->attach($request->input('rol_id'));
