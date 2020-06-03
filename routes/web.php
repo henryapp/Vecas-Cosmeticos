@@ -52,6 +52,13 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','supe
     Route::get('rol/{id}/editar','RolController@editar')->name('editar_rol');
     Route::put('rol/{id}','RolController@actualizar')->name('actualizar_rol');
     Route::delete('rol/{id}','RolController@eliminar')->name('eliminar_rol');
+    //------------Estado-------------
+    Route::get('estado','EstadoController@index')->name('estado');
+    Route::get('estado/crear','EstadoController@crear')->name('crear_estado');
+    Route::post('estado','EstadoController@guardar')->name('guardar_estado');
+    Route::get('estado/{id}/editar','EstadoController@editar')->name('editar_estado');
+    Route::put('estado/{id}','EstadoController@actualizar')->name('actualizar_estado');
+    Route::delete('estado/{id}','EstadoController@eliminar')->name('eliminar_estado');
     //--------- RUTAS MENU ROL--------
     Route::get('menu-rol','MenuRolController@index')->name('menu_rol');
     Route::post('menu-rol','MenuRolController@guardar')->name('guardar_menu_rol');
@@ -66,6 +73,7 @@ Route::post('producto','ProductoController@guardar')->name('guardar_producto');
 Route::get('producto/{id}/editar','ProductoController@editar')->name('editar_producto');
 Route::put('producto/{id}','ProductoController@actualizar')->name('actualizar_producto');
 Route::delete('producto/{id}','ProductoController@eliminar')->name('eliminar_producto');
+Route::get('categoria/sub_categorias/{id}','ProductoController@sub_categorias')->name('obtener_sub_categorias');
 //------------MARCA--------------------
 Route::get('marca','MarcaController@index')->name('marca');
 Route::get('marca/crear','MarcaController@crear')->name('crear_marca');
@@ -80,6 +88,13 @@ Route::post('categoria','CategoriaController@guardar')->name('guardar_categoria'
 Route::get('categoria/{id}/editar','CategoriaController@editar')->name('editar_categoria');
 Route::put('categoria/{id}','CategoriaController@actualizar')->name('actualizar_categoria');
 Route::delete('categoria/{id}','CategoriaController@eliminar')->name('eliminar_categoria');
+//------------SUB CATEGORIA--------------------
+Route::get('sub_categoria','SubCategoriaController@index')->name('sub_categoria');
+Route::get('sub_categoria/crear','SubCategoriaController@crear')->name('crear_subcate');
+Route::post('sub_categoria','SubCategoriaController@guardar')->name('guardar_subcate');
+Route::get('sub_categoria/{id}/editar','SubCategoriaController@editar')->name('editar_subcate');
+Route::put('sub_categoria/{id}','SubCategoriaController@actualizar')->name('actualizar_subcate');
+Route::delete('sub_categoria/{id}','SubCategoriaController@eliminar')->name('eliminar_subcate');
 /*Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');*/

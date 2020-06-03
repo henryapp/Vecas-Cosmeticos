@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ValidacionMarca;
-use App\Models\Marca;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\validacionEstado;
+use App\Models\Admin\Estado;
 use Illuminate\Http\Request;
 
-class MarcaController extends Controller
+class EstadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,8 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        can('listar-marca');
-        $datas=Marca::orderBy('id')->get();
-        return view('marca.index',compact('datas'));
+        $datas=Estado::orderBy('id')->get();
+        return view('admin.estado.index',compact('datas'));
     }
 
     /**
@@ -27,8 +27,7 @@ class MarcaController extends Controller
      */
     public function crear()
     {
-        can('crear-marca');
-        return view('marca.crear');
+        return view('admin.estado.crear');
     }
 
     /**
@@ -37,11 +36,12 @@ class MarcaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(ValidacionMarca $request)
+    public function guardar(validacionEstado $request)
     {
-        Marca::create($request->all());
-        return redirect('marca/crear')->with('mensaje','Marca creada con exito');
+        Estado::create($request->all());
+        return redirect('admin/estado')->with('mensaje','Rol creado con exito');
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -50,9 +50,8 @@ class MarcaController extends Controller
      */
     public function editar($id)
     {
-        can('editar-marca');
-        $data=Marca::findOrFail($id);
-        return view('marca.editar',compact('data'));
+        $data=Estado::findOrFail($id);
+        return view('admin.estado.editar',compact('data'));
     }
 
     /**
@@ -62,10 +61,10 @@ class MarcaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function actualizar(ValidacionMarca $request, $id)
+    public function actualizra(validacionEstado $request, $id)
     {
-        Marca::findOrFail($id)->update($request->all());
-        return redirect('marca')->with('mensaje','Marca actualizado con exito');
+        Estado::findOrFail($id)->update($request->all());
+        return redirect('admin/estado')->with('mensaje','Estado actualizado con exito');
     }
 
     /**
@@ -76,9 +75,8 @@ class MarcaController extends Controller
      */
     public function eliminar(Request $request, $id)
     {
-        can('eliminar-marca');
         if ($request->ajax()) {
-            if (Marca::destroy($id)) {
+            if (Estado::destroy($id)) {
                 return response()->json(['mensaje' => 'ok']);
             } else {
                 return response()->json(['mensaje' => 'ng']);

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ValidacionMarca;
-use App\Models\Marca;
+use App\Http\Requests\ValidacionSubcategoria;
+use App\Models\Categoria;
+use App\Models\SubCategoria;
 use Illuminate\Http\Request;
 
-class MarcaController extends Controller
+class SubCategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,10 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        can('listar-marca');
-        $datas=Marca::orderBy('id')->get();
-        return view('marca.index',compact('datas'));
+        can('listar-sub-categoria');
+        $categorias=Categoria::orderBY('id')->pluck('nombre_cat','id')->toArray();
+        $datas=SubCategoria::orderBy('id')->get();
+        return view('sub_categoria.index',compact('datas','categorias'));
     }
 
     /**
@@ -27,8 +29,9 @@ class MarcaController extends Controller
      */
     public function crear()
     {
-        can('crear-marca');
-        return view('marca.crear');
+        can('crear-sub-categoria');
+        $categorias=Categoria::orderBY('id')->get();
+        return view('sub_categoria.crear',compact('categorias'));
     }
 
     /**
@@ -37,11 +40,14 @@ class MarcaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(ValidacionMarca $request)
+    public function guardar(ValidacionSubcategoria $request)
     {
-        Marca::create($request->all());
-        return redirect('marca/crear')->with('mensaje','Marca creada con exito');
+        SubCategoria::create($request->all());
+        return redirect('sub_categoria/crear')->with('mensaje','Sub-Categoria creada con exito');
     }
+
+   
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -50,9 +56,10 @@ class MarcaController extends Controller
      */
     public function editar($id)
     {
-        can('editar-marca');
-        $data=Marca::findOrFail($id);
-        return view('marca.editar',compact('data'));
+        can('editar-sub-categoria');
+        $categorias=Categoria::orderBY('id')->get();
+        $data=SubCategoria::find($id);
+        return view('sub_categoria.editar',compact('data','categorias'));
     }
 
     /**
@@ -62,10 +69,10 @@ class MarcaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function actualizar(ValidacionMarca $request, $id)
+    public function actualizar(ValidacionSubcategoria $request, $id)
     {
-        Marca::findOrFail($id)->update($request->all());
-        return redirect('marca')->with('mensaje','Marca actualizado con exito');
+        SubCategoria::findOrFail($id)->update($request->all());
+        return redirect('sub_categoria')->with('mensaje','Sub-Categoria actualizada con exito');
     }
 
     /**
@@ -76,9 +83,9 @@ class MarcaController extends Controller
      */
     public function eliminar(Request $request, $id)
     {
-        can('eliminar-marca');
+        can('eliminar-sub-categoria');
         if ($request->ajax()) {
-            if (Marca::destroy($id)) {
+            if (SubCategoria::destroy($id)) {
                 return response()->json(['mensaje' => 'ok']);
             } else {
                 return response()->json(['mensaje' => 'ng']);

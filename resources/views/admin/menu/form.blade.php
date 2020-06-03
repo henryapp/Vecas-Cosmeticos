@@ -21,8 +21,8 @@
       </div>      
 </div>
 <div class="form-group row">
-    <label for="tipo_menu"  class="col-lg-3 col-form-label requerido">Tipo Menu</label>
+    <label for="tipo_menu"  class="col-lg-3 col-form-label ">Tipo Menu</label>
     <div class="col-lg-8">
-      <input type="text" name="tipo_menu" id="tipo_menu" class="form-control" value="{{old('tipo_menu',$data->tipo_menu ??  '')}}" required/>
+      <input type="text" name="tipo_menu" id="tipo_menu" class="form-control" value="{{old('tipo_menu',$data->tipo_menu ??  '')}}" />
     </div>
 </div>

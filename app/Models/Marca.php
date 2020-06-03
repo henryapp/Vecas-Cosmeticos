@@ -10,3 +10,4 @@ class Marca extends Model
     protected $fillable=['nombre_mar'];
     protected $guarded=['id'];
 }
+

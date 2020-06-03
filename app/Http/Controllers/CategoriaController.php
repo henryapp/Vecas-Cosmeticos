@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Http\Requests\ValidacionCategoria;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -14,7 +15,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        
+        can('listar-categoria');
+        $datas=Categoria::orderBy('id')->get();
+        return view('categoria.index',compact('datas'));
     }
 
     /**
@@ -24,7 +27,8 @@ class CategoriaController extends Controller
      */
     public function crear()
     {
-        //
+        can('crear-categoria');
+        return view('categoria.crear');
     }
 
     /**
@@ -33,9 +37,10 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(Request $request)
+    public function guardar(ValidacionCategoria $request)
     {
-        //
+        Categoria::create($request->all());
+        return redirect('categoria/crear')->with('mensaje','Permiso creado con exito');
     }
 
   
@@ -47,7 +52,9 @@ class CategoriaController extends Controller
      */
     public function editar($id)
     {
-        //
+        can('editar-categoria');
+        $data=Categoria::findOrFail($id);
+        return view('categoria.editar',compact('data'));
     }
 
     /**
@@ -57,9 +64,10 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function actualizar(Request $request, $id)
+    public function actualizar(ValidacionCategoria $request, $id)
     {
-        //
+        Categoria::findOrFail($id)->update($request->all());
+        return redirect('categoria')->with('mensaje','Permiso actualizado con exito');
     }
 
     /**
@@ -68,8 +76,17 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function eliminar($id)
+    public function eliminar(Request $request,$id)
     {
-        //
+        can('eliminar-categoria');
+        if ($request->ajax()) {
+            if (Categoria::destroy($id)) {
+                return response()->json(['mensaje' => 'ok']);
+            } else {
+                return response()->json(['mensaje' => 'ng']);
+            }
+        } else {
+            abort(404);
+        }
     }
 }

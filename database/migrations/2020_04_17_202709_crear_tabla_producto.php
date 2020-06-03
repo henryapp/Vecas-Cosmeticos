@@ -18,9 +18,6 @@ class CrearTablaProducto extends Migration
             $table->unsignedBigInteger('marca_id');
             $table->foreign('marca_id','fk_producto_marca')->references('id')
             ->on('marca')->onDelete('restrict')->onUpdate('restrict');
-            $table->unsignedBigInteger('imagen_id');
-            $table->foreign('imagen_id','fk_producto_imagenProducto')->references('id')
-            ->on('imagen_producto')->onDelete('restrict')->onUpdate('restrict');
             $table->unsignedBigInteger('estado_id');
             $table->foreign('estado_id','fk_producto_estado')->references('id')
             ->on('estado')->onDelete('restrict')->onUpdate('restrict');
@@ -29,6 +26,7 @@ class CrearTablaProducto extends Migration
             $table->text('descripcion');
             $table->decimal('precio_costo',8,2);
             $table->decimal('precio_venta',8,2);
+            $table->string('foto', 100)->nullable();
             $table->timestamps();
             $table->charset='utf8mb4';
             $table->collation='utf8mb4_spanish_ci';
